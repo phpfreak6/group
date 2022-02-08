@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "40c05f11-7753-427f-88eb-0c3a3dfeeab8",
+		"name": "Group Test Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "group_name",
+							"value": "Buddies Group",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://group.test/api/groups",
+					"protocol": "http",
+					"host": [
+						"group",
+						"test"
+					],
+					"path": [
+						"api",
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Group Participant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "group_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://group.test/api/groups/add-participant",
+					"protocol": "http",
+					"host": [
+						"group",
+						"test"
+					],
+					"path": [
+						"api",
+						"groups",
+						"add-participant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Group Participant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "group_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://group.test/api/groups/remove-participant",
+					"protocol": "http",
+					"host": [
+						"group",
+						"test"
+					],
+					"path": [
+						"api",
+						"groups",
+						"remove-participant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Group Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "group_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "My name is PHP Freak",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://group.test/api/groups/message",
+					"protocol": "http",
+					"host": [
+						"group",
+						"test"
+					],
+					"path": [
+						"api",
+						"groups",
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Group Messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://group.test/api/groups/message/1",
+					"protocol": "http",
+					"host": [
+						"group",
+						"test"
+					],
+					"path": [
+						"api",
+						"groups",
+						"message",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
